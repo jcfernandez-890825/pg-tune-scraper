@@ -69,5 +69,5 @@ cpu=$(nproc)
 storage=ssd
 db_type=oltp
 
-./scrape.py -d $posgre_ver -o $os_type -dt $db_type -r $ram_size -c $cpu -st $store
+./scrape.py -d $posgre_ver -o $os_type -dt $db_type -r $ram_size -c $cpu -st $storage
 ```
