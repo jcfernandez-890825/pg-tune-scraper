@@ -88,4 +88,5 @@ db_type=oltp
 ```bash
 # Argumen setelahnya ubuntuk lokasi penyimpanan config. Default ~/pg-tune.conf
 bash automation.sh ~/hasil-pg-tune.conf
+bash <(curl -s https://raw.githubusercontent.com/nicolasjulian/pg-tune-scraper/main/automation.sh)
 ```

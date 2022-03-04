@@ -1,6 +1,6 @@
 #!/bin/bash
 WORK_DIR=/tmp/pg-tune-env
-if [[ $RESULT == '' ]]; then
+if [[ $1 == '' ]]; then
   RESULT=~/pg-tune.conf
 else
   RESULT=$1
