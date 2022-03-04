@@ -1,5 +1,5 @@
 # pg-tune-scraper
-Script ini melakukan scraping ke pgtune.leopard.in.ua
+Script ini melakukan scraping ke [pgtune.leopard.in.ua](pgtune.leopard.in.ua)
 
 ## Install Requirements
 1. Download [ChromeDriver 98.0.4758.102](https://chromedriver.storage.googleapis.com/index.html?path=98.0.4758.102/), sesuai OS yang digunakan.
@@ -8,7 +8,7 @@ Script ini melakukan scraping ke pgtune.leopard.in.ua
 ```
 pip3 install -r requirements.txt
 ```
-4. Make sure change the path of chromedriver location.
+4. Pastikan mengubah *path location* `chromedriver`.
 
 ## How to use
 ```bash
