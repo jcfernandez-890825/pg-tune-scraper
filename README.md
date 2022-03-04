@@ -84,7 +84,8 @@ db_type=oltp
 ./scrape.py -d $posgre_ver -o $os_type -dt $db_type -r $ram_size -c $cpu -st $storage
 ```
 
-## Automation
+## Automation (Works Tested Ubuntu 20.04.4 LTS)
 ```bash
-bash automation.sh
+# Argumen setelahnya ubuntuk lokasi penyimpanan config. Default ~/pg-tune.conf
+bash automation.sh ~/hasil-pg-tune.conf
 ```
