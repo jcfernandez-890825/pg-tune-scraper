@@ -1,5 +1,5 @@
 # pg-tune-scraper
-Script ini melakukan scraping ke [pgtune.leopard.in.ua](pgtune.leopard.in.ua)
+Script ini melakukan scraping ke [pgtune.leopard.in.ua](https://pgtune.leopard.in.ua)
 
 ## Install Requirements
 ### 1. Python3
@@ -82,4 +82,9 @@ storage=ssd
 db_type=oltp
 
 ./scrape.py -d $posgre_ver -o $os_type -dt $db_type -r $ram_size -c $cpu -st $storage
+```
+
+## Automation
+```bash
+bash automation.sh
 ```
