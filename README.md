@@ -87,6 +87,5 @@ db_type=oltp
 ## Automation (Works Tested Ubuntu 20.04.4 LTS)
 ```bash
 # Argumen setelahnya ubuntuk lokasi penyimpanan config. Default ~/pg-tune.conf
-bash automation.sh ~/hasil-pg-tune.conf
-bash <(curl -s https://raw.githubusercontent.com/nicolasjulian/pg-tune-scraper/main/automation.sh)
+bash <(curl -s https://raw.githubusercontent.com/nicolasjulian/pg-tune-scraper/main/automation.sh) /tmp/cobain-euyyyy.conf
 ```
