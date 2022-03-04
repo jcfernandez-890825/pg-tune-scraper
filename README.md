@@ -2,20 +2,18 @@
 Script ini melakukan scraping ke [pgtune.leopard.in.ua](pgtune.leopard.in.ua)
 
 ## Install Requirements
-1. Download [ChromeDriver 98.0.4758.102](https://chromedriver.storage.googleapis.com/index.html?path=98.0.4758.102/), sesuai OS yang digunakan.
-2. Python3
-3. Install python modules
+### 1. Python3
+### 2. Download [ChromeDriver 98.0.4758.102](https://chromedriver.storage.googleapis.com/index.html?path=98.0.4758.102/), sesuai OS yang digunakan.
+### 3. Install python modules
 ```
 pip3 install -r requirements.txt
 ```
-4. Pastikan mengubah *path location* `chromedriver`.
-
-
-## Linux (Tested Ubuntu 20.04)
-```bash
-sudo apt install chromium-browser
-sed -i 's|./chromedriver|/snap/bin/chromium.chromedriver|g' scrape.py
-```
+### 4. Pastikan mengubah *path location* `chromedriver`.
+  #### Linux (Tested Ubuntu 20.04)
+  ```bash
+  sudo apt install chromium-browser
+  sed -i 's|./chromedriver|/snap/bin/chromium.chromedriver|g' scrape.py
+  ```
 
 ## How to use
 ```bash
