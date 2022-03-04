@@ -59,3 +59,15 @@ max_parallel_workers_per_gather = 4
 max_parallel_workers = 16
 max_parallel_maintenance_workers = 4
 ```
+
+## Linux Cheat
+```
+os_type=$(os=`uname`;echo "${os,,}")
+posgre_ver=$(psql -V | awk '{print $3}'|awk -F '.' '{print $1}')
+ram_size=$(free --si -g |grep ^Mem |awk {'print $2'})
+cpu=$(nproc)
+storage=ssd
+db_type=oltp
+
+./scrape.py -d $posgre_ver -o $os_type -dt $db_type -r $ram_size -c $cpu -st $store
+```
