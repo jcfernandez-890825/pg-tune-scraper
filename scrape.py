@@ -27,7 +27,7 @@ capabilities = dict(webdriver.DesiredCapabilities.CHROME)
 options = webdriver.ChromeOptions()
 options.add_argument('--ignore-ssl-errors=yes')
 options.add_argument('--ignore-certificate-errors')
-#options.add_argument("headless")
+options.add_argument("headless")
 options.add_argument("--window-size=1680x913")
 
 s = Service('./chromedriver')
