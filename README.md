@@ -10,6 +10,13 @@ pip3 install -r requirements.txt
 ```
 4. Pastikan mengubah *path location* `chromedriver`.
 
+
+## Linux (Tested Ubuntu 20.04)
+```bash
+sudo apt install chromium-browser
+sed -i 's|./chromedriver|/snap/bin/chromium.chromedriver|g' scrape.py
+```
+
 ## How to use
 ```bash
 ➜  pg-tune-scraper git:(main) ✗ ./scrape.py -h
