@@ -11,11 +11,23 @@ pip3 install -r requirements.txt
 ### 4. Pastikan mengubah *path location* `chromedriver`.
   #### Linux (Tested Ubuntu 20.04)
   ```bash
-  sudo apt install chromium-browser
+  cd pg-tune-scraper
+  sudo apt install chromium-browser -y
   sed -i 's|./chromedriver|/snap/bin/chromium.chromedriver|g' scrape.py
   ```
-
 ## How to use
+
+### Python3 Virtual Environment (Tested Ubuntu 20.04)
+```bash
+sudo apt install chromium-browser python3.8-venv -y
+python3 -m venv ./pg-tune-env
+source pg-tune-env/bin/activate
+git clone https://github.com/nicolasjulian/pg-tune-scraper.git
+cd pg-tune-scraper
+sed -i 's|./chromedriver|/snap/bin/chromium.chromedriver|g' scrape.py
+pip3 install -r requirements.txt
+```
+
 ```bash
 ➜  pg-tune-scraper git:(main) ✗ ./scrape.py -h
 usage: scrape.py [-h] -d DATABASEVERSION -o OS -dt DBTYPE -r RAM -c CPU [-con CONNECTIONS] -st STORAGETYPE
@@ -61,7 +73,7 @@ max_parallel_maintenance_workers = 4
 ```
 
 ## Linux Cheat
-```
+```bash
 os_type=$(os=`uname`;echo "${os,,}")
 posgre_ver=$(psql -V | awk '{print $3}'|awk -F '.' '{print $1}')
 ram_size=$(free --si -g |grep ^Mem |awk {'print $2'})
