@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from selenium import webdriver
 import time
 import os
@@ -29,7 +30,7 @@ options.add_argument('--ignore-certificate-errors')
 #options.add_argument("headless")
 options.add_argument("--window-size=1680x913")
 
-s = Service('/usr/local/bin/chromedriver')
+s = Service('./chromedriver')
 driver = webdriver.Chrome(service=s,options=options)
 
 ### Select PostgreSQL Version
