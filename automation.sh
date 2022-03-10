@@ -16,8 +16,8 @@ db_type=oltp
 connection=1000
 
 ## Install packages
-#sudo apt install chromium-browser python3.8-venv -y && sudo snap install chromium
 sudo DEBIAN_FRONTEND=noninteractive apt-get install -qq chromium-browser python3.8-venv -y < /dev/null > /dev/null && sudo snap install chromium
+
 ## Setup tools
 python3 -m venv $WORK_DIR
 source $WORK_DIR/bin/activate
@@ -29,7 +29,6 @@ cd $WORK_DIR/pg-tune-scraper && sed -i 's|./chromedriver|/snap/bin/chromium.chro
 cd $WORK_DIR/pg-tune-scraper && ./scrape.py -d $posgre_ver -o $os_type -dt $db_type -r $ram_size -c $cpu -st $storage -con $connection| tee $RESULT
 
 ## Clean up workspace & chromium
-sudo apt remove chromium-browser --purge -y -qq > /dev/null
 sudo DEBIAN_FRONTEND=noninteractive apt-get remove --purge -y -qq chromium-browser < /dev/null > /dev/null
 sudo snap remove chromium
 export PWD=~/
