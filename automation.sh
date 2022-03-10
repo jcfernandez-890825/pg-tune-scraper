@@ -13,6 +13,7 @@ ram_size=$(free --si -g |grep ^Mem |awk {'print $2'})
 cpu=$(nproc)
 storage=ssd
 db_type=oltp
+connection=1000
 
 ## Install packages
 #sudo apt install chromium-browser python3.8-venv -y && sudo snap install chromium
@@ -25,10 +26,10 @@ cd $WORK_DIR/pg-tune-scraper && pip3 install -r requirements.txt
 cd $WORK_DIR/pg-tune-scraper && sed -i 's|./chromedriver|/snap/bin/chromium.chromedriver|g' scrape.py
 
 ## Get config
-cd $WORK_DIR/pg-tune-scraper && ./scrape.py -d $posgre_ver -o $os_type -dt $db_type -r $ram_size -c $cpu -st $storage | tee $RESULT
+cd $WORK_DIR/pg-tune-scraper && ./scrape.py -d $posgre_ver -o $os_type -dt $db_type -r $ram_size -c $cpu -st $storage -con $connection| tee $RESULT
 
 ## Clean up workspace & chromium
-#sudo apt remove chromium-browser --purge -y -qq > /dev/null
+sudo apt remove chromium-browser --purge -y -qq > /dev/null
 sudo DEBIAN_FRONTEND=noninteractive apt-get remove --purge -y -qq chromium-browser < /dev/null > /dev/null
 sudo snap remove chromium
 export PWD=~/
